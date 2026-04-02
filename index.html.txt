@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sip & Soul | Aesthetic Cafe Jamshedpur</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+        :root {
+            --gold: #d4af37;
+            --bg-dark: #0d0d0d;
+            --fg: #f5f0e8;
+            --glass-bg: rgba(13, 13, 13, 0.72);
+            --border: rgba(212, 175, 55, 0.18);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--fg);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 10px; height: 10px;
+            background: var(--gold); border-radius: 50%; pointer-events: none;
+            z-index: 9999; transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .menu-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .menu-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .gold-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            transition: 0.3s;
+        }
+        .btn-gold:hover { background: white; transform: scale(1.05); }
+
+        .wa-btn {
+            border: 1px solid #25D366;
+            color: #25D366;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            transition: 0.3s;
+        }
+        .wa-btn:hover { background: #25D366; color: white; }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+    <div class="cursor-dot" id="cursor"></div>
+
+    <nav class="fixed w-full z-50 glass px-6 py-4 flex justify-between items-center">
+        <div class="text-gold font-serif text-2xl tracking-[0.2em]">SIP & SOUL</div>
+        <div class="hidden md:flex space-x-8 text-[10px] tracking-[0.3em] opacity-70">
+            <a href="#home" class="hover:text-gold">HOME</a>
+            <a href="#menu" class="hover:text-gold">MENU</a>
+            <a href="#visit" class="hover:text-gold">VISIT</a>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4 relative">
+        <div data-aos="zoom-out" data-aos-duration="2000">
+            <h1 class="text-6xl md:text-8xl font-serif italic text-gold mb-4">Brewing Dreams</h1>
+            <p class="tracking-[0.5em] text-xs opacity-50 uppercase">The Aesthetic Experience | Jamshedpur</p>
+        </div>
+        <div class="gold-line w-64 mt-10"></div>
+    </section>
+
+    <section id="menu" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="font-serif text-4xl md:text-5xl">Our Signature Brews</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <div class="menu-card p-6" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1541167760496-162955ed8a9f?w=600" class="rounded-xl mb-6 w-full h-56 object-cover" alt="">
+                <h3 class="font-serif text-2xl mb-2 text-gold">Midnight Brew</h3>
+                <p class="text-xs opacity-50 mb-4">Dark roast espresso with artisan chocolate.</p>
+                <div class="text-lg font-bold mb-6">₹190</div>
+                
+                <div class="space-y-3">
+                    <a href="https://wa.me/919391566295?text=Bhai%201%20Midnight%20Brew%20order%20karna%20hai" class="wa-btn">
+                        <i class="fab fa-whatsapp mr-2"></i> Order on WhatsApp
+                    </a>
+                    <a href="upi://pay?pa=9391566295@ptsbi&pn=SipAndSoul&am=190&cu=INR" class="btn-gold">
+                        ⚡ Quick Pay ₹190
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-card p-6" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1559589689-577aabd1db4f?w=600" class="rounded-xl mb-6 w-full h-56 object-cover" alt="">
+                <h3 class="font-serif text-2xl mb-2 text-gold">Golden Croissant</h3>
+                <p class="text-xs opacity-50 mb-4">Buttery pastry served with vanilla butter.</p>
+                <div class="text-lg font-bold mb-6">₹120</div>
+                
+                <div class="space-y-3">
+                    <a href="https://wa.me/919391566295?text=Bhai%201%20Croissant%20order%20karna%20hai" class="wa-btn">
+                        <i class="fab fa-whatsapp mr-2"></i> Order on WhatsApp
+                    </a>
+                    <a href="upi://pay?pa=9391566295@ptsbi&pn=SipAndSoul&am=120&cu=INR" class="btn-gold">
+                        ⚡ Quick Pay ₹120
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-card p-6" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600" class="rounded-xl mb-6 w-full h-56 object-cover" alt="">
+                <h3 class="font-serif text-2xl mb-2 text-gold">Soul Iced Tea</h3>
+                <p class="text-xs opacity-50 mb-4">Hand-picked tea brewed with fresh peach.</p>
+                <div class="text-lg font-bold mb-6">₹150</div>
+                
+                <div class="space-y-3">
+                    <a href="https://wa.me/919391566295?text=Bhai%201%20Iced%20Tea%20order%20karna%20hai" class="wa-btn">
+                        <i class="fab fa-whatsapp mr-2"></i> Order on WhatsApp
+                    </a>
+                    <a href="upi://pay?pa=9391566295@ptsbi&pn=SipAndSoul&am=150&cu=INR" class="btn-gold">
+                        ⚡ Quick Pay ₹150
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="visit" class="py-20 border-t border-white/5 text-center">
+        <h3 class="font-serif text-3xl text-gold mb-4">Sip & Soul Jamshedpur</h3>
+        <p class="text-[8px] opacity-20 tracking-widest uppercase mt-10">&copy; 2026 DESIGNED FOR THE AESTHETIC SOUL</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
